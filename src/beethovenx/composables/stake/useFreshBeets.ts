@@ -178,10 +178,7 @@ export function useFreshBeets() {
   const farmApr = computed(() =>
     fbeetsDecoratedFarm.value ? fbeetsDecoratedFarm.value.apr : 0
   );
-  const fbeetsApr = computed(() => data.value?.apr || 0);
-  const totalApr = computed(
-    () => swapApr.value + farmApr.value + fbeetsApr.value
-  );
+  const totalApr = computed(() => swapApr.value + farmApr.value);
 
   async function stake(amount: string) {
     const tx = await governanceContractsService.fbeets.enter(
@@ -245,7 +242,6 @@ export function useFreshBeets() {
     userUnstakedFbeetsBalance,
     swapApr,
     farmApr,
-    fbeetsApr,
     totalApr,
     refetch,
 

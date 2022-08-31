@@ -18,12 +18,6 @@
           <span class="ml-1 text-gray-500 text-xs">{{ $t('swapFeeAPR') }}</span>
         </div>
         <div class="whitespace-nowrap flex items-center mb-1">
-          {{ fNum(fbeetsApr, 'percent') }}
-          <span class="ml-1 text-gray-500 text-xs">
-            fBEETS APR
-          </span>
-        </div>
-        <div class="whitespace-nowrap flex items-center mb-1">
           {{ fNum(farmApr, 'percent') }}
           <span class="ml-1 text-gray-500 text-xs">
             Farm APR
@@ -49,10 +43,6 @@ export default defineComponent({
     farmApr: {
       type: Number,
       required: true
-    },
-    fbeetsApr: {
-      type: Number,
-      required: true
     }
   },
 
@@ -62,7 +52,7 @@ export default defineComponent({
      */
     const { fNum } = useNumbers();
     const totalApr = computed(() => {
-      return props.swapApr + props.farmApr + props.fbeetsApr;
+      return props.swapApr + props.farmApr;
     });
 
     return { totalApr, fNum };

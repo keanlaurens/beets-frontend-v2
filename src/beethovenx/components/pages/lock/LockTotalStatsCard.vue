@@ -61,7 +61,7 @@ export default defineComponent({
       totalLockedPercentage,
       totalRewardsApr
     } = useLock();
-    const { swapApr, fbeetsApr } = useFreshBeets();
+    const { swapApr } = useFreshBeets();
 
     function nextDay(d, dow: number) {
       const addDays = (dow + (7 - d.getDay())) % 7 || 7;
@@ -76,7 +76,7 @@ export default defineComponent({
     });
 
     const totalApr = computed(() =>
-      sum([totalRewardsApr.value, swapApr.value, fbeetsApr.value])
+      sum([totalRewardsApr.value, swapApr.value])
     );
 
     return {
@@ -88,7 +88,6 @@ export default defineComponent({
       totalRewardsApr,
       nextEpochStartDate,
       swapApr,
-      fbeetsApr,
       totalApr
     };
   }

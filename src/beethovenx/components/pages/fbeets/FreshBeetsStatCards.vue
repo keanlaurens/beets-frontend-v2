@@ -20,7 +20,6 @@ const {
   fBeetsLoading,
   swapApr,
   farmApr,
-  fbeetsApr,
   totalApr
 } = useFreshBeets();
 </script>
@@ -62,11 +61,7 @@ const {
         </div>
         <div class="text-xl font-medium truncate flex items-center">
           {{ fNum(totalApr || '0', 'percent') }}
-          <FreshBeetsAprTooltip
-            :swap-apr="swapApr"
-            :farm-apr="farmApr"
-            :fbeets-apr="fbeetsApr"
-          />
+          <FreshBeetsAprTooltip :swap-apr="swapApr" :farm-apr="farmApr" />
         </div>
       </BalCard>
     </template>
