@@ -10,14 +10,12 @@
         Stake your Fidelio Duetto BPTs for fBEETS
       </h2>
       <p>
-        30% of Beethoven X protocol revenue is used to reward fBEETS holders.
         When you stake your Fidelio Duetto BPTs, you receive fBEETS in return.
-        fBEETS holders earn triple yield:
+        fBEETS holders earn double yield:
       </p>
       <ol class="list-decimal list-inside ml-2 mt-2">
         <li>Swap fees earned as a Liquidity Provider (LP)</li>
         <li>Farm incentives</li>
-        <li>30% of Protocol Revenue</li>
       </ol>
       <!--        <BalLoadingBlock v-if="false" class="h-10 w-40" />-->
     </div>
