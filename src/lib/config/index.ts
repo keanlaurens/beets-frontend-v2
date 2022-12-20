@@ -97,11 +97,11 @@ export interface Config {
 const config: Record<Config['chainId'], Config> = {
   //[Network.MAINNET]: homestead,
   //[Network.KOVAN]: kovan,
-  [Network.RINKEBY]: rinkeby,
+  // [Network.RINKEBY]: rinkeby,
   //[Network.POLYGON]: polygon,
   //[Network.ARBITRUM]: arbitrum,
-  [Network.FANTOM]: fantom,
-  [Network.OPTIMISM]: optimism,
+  // [Network.FANTOM]: fantom,
+  // [Network.OPTIMISM]: optimism,
   //12345: test,
   // @ts-ignore
   17: docker

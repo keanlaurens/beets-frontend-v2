@@ -21,7 +21,7 @@ const defaultLocale = 'en-US';
 //   if (locale.slice(0, 2) === browserLocale.slice(0, 2)) defaultLocale = locale;
 // });
 
-const i18n = createI18n({
+const i18n: any = createI18n({
   locale: defaultLocale,
   messages,
   dateTimeFormats: {
