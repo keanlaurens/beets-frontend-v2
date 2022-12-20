@@ -98,7 +98,7 @@ export default defineComponent({
     },
     axisLabelFormatter: {
       type: Object as PropType<AxisLabelFormat>,
-      default: () => ({})
+      default: () => ({ yAxis: '$0,0.00', xAxis: '' })
     },
     color: {
       type: Array as PropType<string[]>
